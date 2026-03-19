@@ -52,13 +52,15 @@
             txt_input.Name = "txt_input";
             txt_input.Size = new Size(983, 78);
             txt_input.TabIndex = 1;
+            txt_input.KeyDown += txt_input_KeyDown;
             // 
             // lst_messages
             // 
+            lst_messages.Font = new Font("맑은 고딕", 15F);
             lst_messages.FormattingEnabled = true;
             lst_messages.Location = new Point(44, 170);
             lst_messages.Name = "lst_messages";
-            lst_messages.Size = new Size(1208, 420);
+            lst_messages.Size = new Size(1208, 382);
             lst_messages.TabIndex = 2;
             // 
             // btn_send
@@ -84,7 +86,7 @@
             Controls.Add(txt_input);
             Controls.Add(lbl_title);
             Name = "Form1";
-            Text = "Form1";
+            Text = "EchoMessenger";
             ResumeLayout(false);
             PerformLayout();
         }
