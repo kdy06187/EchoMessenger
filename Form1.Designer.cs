@@ -126,7 +126,7 @@
             Controls.Add(txt_input);
             Controls.Add(lbl_title);
             Name = "Form1";
-            Text = "EchoMessenger";
+            Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
         }
