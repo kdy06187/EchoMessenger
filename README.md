@@ -10,12 +10,14 @@
 - 사용 기술 및 핵심 기능 :
   - ```Visual Studio```를 이용하여 UI 디자인
   - ```String``` 클래스를 이용한 사용자 입력 데이터 처리
-  - ```DateTime``` 클래스를 이용한 현재시간 정보 구하기 
+  - ```DateTime``` 클래스를 이용한 현재시간 정보 구하기
+  - ```listbox.Items.Add(msg)```,```listbox.Items.RemoveAt(index)```,```listbox.SelectedIndex```로 ListBox의 Item 관리
+  - ```string.IsNullOrWhiteSpace(string)```,```string.Trim()```으로 문자열의 null과 공백 검사 및 공백제거
+  - ```textbox.Clear()```와 ```textbox.Focus()```로 TextBox 초기화 및 포커스 설정
+  - ```if (e.KeyCode == Keys.Enter)```로 Enter 입력 이벤트 관리
 - 화면 구성 : 
   
-  <img width="1522" height="887" alt="image" src="https://github.com/user-attachments/assets/f7bf9981-b81d-4a5c-a710-866958d89ae0" />
-
-
+<img width="1498" height="872" alt="image" src="https://github.com/user-attachments/assets/cdeab205-6381-44a9-8657-3256f5ae5856" />
   
 ## 실행 화면
 - 1단계 코드의 실행 스크린샷
@@ -70,3 +72,9 @@
     - ```ListBox```의 ```SelectedIndex```를 활용해 특정 메시지 선택 후 ```Items.RemoveAt()```로 삭제
     - ```ListBox```의 ```Items.Clear()```를 활용해 대화 기록 전체 삭제
     - 전송 로직에서 공백 검사 후 ```if(msg.Length > 50)```를 활용해 글자 수 제한 및 경고 메시지를 ```MessageBox```로 출력
+  ## 어려웠거나 새로 배운 점
+  - ```IsNullOrWhiteSpace```을 이용하면 ```str.length >=0```같은 조건문으로 쓰지 않아도 되고 더 정확해서 편리했다.
+  - TextBox를 초기화할 떄 ```textbox.Text = ""```가 아닌 ```textbox.Clear()```로 간단하게 바꿀 수 있었다.
+  - 메시지의 개수를 표시하는 하단 Label을 업데이트하는 로직이 너무 중복되었는데 이 로직을 따로 메서드로 분리헤서 가독성을 높혔다.
+  - 각 컨트롤들을 이벤트마다 새로 할당하는 것이 마음에 안들었는데 전역변수로 선언해서 한번만 할당하도록 바꿨다.
+
